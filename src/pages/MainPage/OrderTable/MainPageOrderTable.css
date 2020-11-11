@@ -1,8 +1,23 @@
 .Test--MainPageOrderTable {
+  position: relative;
   &-Title {
     margin-bottom: var(--space-2xl);
     max-width: var(--section-width);
     margin: 0 auto var(--section-spase) auto;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 70px;
+    left: 50%;
+    width: 1200px;
+    height: calc(100% + 260px);
+    border-radius: 60% 30% 30% 26% / 70% 23% 52% 32%;
+    background-color: var(--color-bg-secondary);
+    transform: translate(-70%, 0%) rotate(-3deg);
+    opacity: 0.5;
   }
 
   &-InputLabel {

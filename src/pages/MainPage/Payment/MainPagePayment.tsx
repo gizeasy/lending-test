@@ -26,7 +26,7 @@ export const MainPagePayment: React.FC = () => {
 
   return (
     <div className={cnMainPagePayment()}>
-      <Text className={cnMainPagePayment("Title")} size="3xl" align="center">
+      <Text className={cnMainPagePayment("Title")} size="3xl" align="center" lineHeight="s">
         Как будете платить?
       </Text>
       <div className={cnMainPagePayment("ChoiceGroupWrapper")}>

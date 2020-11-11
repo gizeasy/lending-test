@@ -19,7 +19,7 @@ export function MainPage() {
   return (
     <div className={cnMainPage()}>
       <AppHeader />
-      <div className={cnMainPage("Contrent")}>
+      <div className={cnMainPage("Content")}>
         <MainPageIWantToEat />
         <div className={cnMainPage("EatSection")}>
           <MainPageWhatToCook />

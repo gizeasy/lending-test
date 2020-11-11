@@ -3,6 +3,20 @@
   max-width: var(--section-width);
   margin: 0 auto var(--section-spase) auto;
 
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 25%;
+    right: -10%;
+    width: 900px;
+    height: 900px;
+    border-radius: 70% 38% / 70% 46%;
+    background-color: var(--color-bg-normal);
+    transform: translate(100%, -50%) rotate(35deg);
+    opacity: 0.5;
+  }
+
   &-Title {
     margin-bottom: var(--space-2xl);
   }
@@ -27,12 +41,13 @@
 
   &-Image {
     display: none;
+
     @media (min-width: 760px) {
       display: block;
       position: absolute;
       width: 230px;
       right: -120px;
-      top: 80px;
+      top: 60px;
     }
   }
 }

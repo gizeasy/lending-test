@@ -16,13 +16,13 @@ export const MainPageIWantToEat: React.FC = () => {
 
   return (
     <div className={cnMainPageIWantToEat()}>
-      <Text className={cnMainPageIWantToEat("Title")} size="5xl" weight="bold">
+      <Text className={cnMainPageIWantToEat("Title")} size="5xl" weight="bold" lineHeight="s">
         Хочу есть!
       </Text>
-      <Text className={cnMainPageIWantToEat("SubTitle")} size="3xl">
+      <Text className={cnMainPageIWantToEat("SubTitle")} size="3xl" lineHeight="s">
         Одно блюдо. Быстро и вкусно
       </Text>
-      <Text className={cnMainPageIWantToEat("InputLabel")} size="l">
+      <Text className={cnMainPageIWantToEat("InputLabel")} size="l" lineHeight="s">
         Как к вам обращаться?
       </Text>
       <TextField

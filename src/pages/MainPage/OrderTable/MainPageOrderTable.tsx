@@ -70,7 +70,7 @@ export const MainPageOrderTable: React.FC = () => {
 
   return (
     <div className={cnMainPageOrderTable()}>
-      <Text className={cnMainPageOrderTable("Title")} size="3xl">
+      <Text className={cnMainPageOrderTable("Title")} size="3xl" lineHeight="s">
         Считаете калории?
       </Text>
       <div className={cnMainPageOrderTable("Board")}>

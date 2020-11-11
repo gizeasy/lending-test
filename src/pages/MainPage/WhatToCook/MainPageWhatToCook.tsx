@@ -31,7 +31,7 @@ export const MainPageWhatToCook: React.FC = () => {
 
   return (
     <div className={cnMainPageWhatToCook()}>
-      <Text className={cnMainPageWhatToCook("Title")} size="3xl">
+      <Text className={cnMainPageWhatToCook("Title")} size="3xl" lineHeight="s">
         Итальянская, азиатская или...
       </Text>
       <Text className={cnMainPageWhatToCook("InputLabel")} size="l">

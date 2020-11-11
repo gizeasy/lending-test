@@ -3,6 +3,20 @@
   max-width: var(--section-width);
   margin: var(--section-spase) auto;
 
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -167%;
+    left: -92%;
+    width: 1200px;
+    height: 820px;
+    background-color: var(--color-bg-secondary);
+    transform: rotate(7deg);
+    border-radius: 0 0 30% 40% / 0 0 48% 60%;
+    opacity: 0.5;
+  }
+
   &-Title {
     margin-bottom: var(--space-m);
   }

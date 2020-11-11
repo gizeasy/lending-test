@@ -9,7 +9,7 @@ const cnMainPageMenu = cn("MainPageMenu");
 export const MainPageMenu: React.FC = () => {
   return (
     <div className={cnMainPageMenu()}>
-      <Text className={cnMainPageMenu("Title")} size="3xl">
+      <Text className={cnMainPageMenu("Title")} size="3xl" lineHeight="s">
         Не уверены за что платите?
       </Text>
       <Text className={cnMainPageMenu("SubTitle")} size="xl">

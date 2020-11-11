@@ -109,4 +109,5 @@ html {
   --section-width: 600px;
   --section-spase: var(--space-5xl);
   padding: 0 var(--space-l);
+  overflow: hidden;
 }

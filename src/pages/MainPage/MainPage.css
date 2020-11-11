@@ -1,5 +1,5 @@
 .Test--MainPage {
-  &-Contrent {
+  &-Content {
     padding-top: var(--section-spase);
   }
   &-EatSection {

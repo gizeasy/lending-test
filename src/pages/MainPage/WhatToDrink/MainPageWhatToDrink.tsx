@@ -41,7 +41,7 @@ export const MainPageWhatToDrink: React.FC = () => {
 
   return (
     <div className={cnMainPageWhatToDrink()}>
-      <Text className={cnMainPageWhatToDrink("Title")} size="3xl">
+      <Text className={cnMainPageWhatToDrink("Title")} size="3xl" lineHeight="s">
         Чай, кофе, потанцуем?
       </Text>
       <Tabs
