@@ -1,0 +1,163 @@
+/* LIGHT */
+
+$palette-g1: #ffffff;
+$palette-g2: #f4f6fb;
+$palette-g3: #d6dbe7;
+$palette-g4: #bfc6d7;
+$palette-g5: #a1a5b7;
+$palette-g6: #8d91a4;
+$palette-g7: #777b92;
+$palette-g8: #606580;
+$palette-g9: #50546b;
+$palette-g10: #404355;
+$palette-g11: #303340;
+$palette-g12: #20222b;
+$palette-g13: #13151c;
+$palette-b1: #337eff;
+$palette-b2: #0f62fe;
+$palette-y1: #ff7c0a;
+$palette-y2: #d36300;
+$palette-y3: #f2c94c;
+$palette-r1: #f14141;
+$palette-r2: #ad1218;
+$palette-gr1: #49ab4d;
+$palette-gr2: #0c7733;
+$palette-p1: #a2e2ff;
+
+$palette-b1-20: #d6e5ff;
+$palette-y1-20: #ffe5ce;
+$palette-r1-20: #fcd9d9;
+$palette-gr1-20: #dbeedb;
+$palette-g7-20: #e4e5e9;
+
+$palette-b1-30: #1d3460;
+$palette-y1-30: #5a3417;
+$palette-r1-30: #562227;
+$palette-gr1-30: #23422b;
+$palette-g7-30: #31343f;
+
+$palette-lock-l: #99bfff;
+$palette-lock-d: #295095;
+
+$palette-new-b1-1: #0C78F7;
+$palette-new-b1-2: #0862D1;
+$palette-new-b2-1: #3F91FF;
+$palette-new-b2-2: #49ABFF;
+
+$palette-new-g1-1: #1E8F3F;
+$palette-new-g1-2: #167632;
+$palette-new-g2-1: #2EA64F;
+$palette-new-g2-2: #47BB67;
+
+$palette-new-y1-1: #F0B100;
+$palette-new-y1-2: #E4A100;
+$palette-new-y2-1: #F9C119;
+$palette-new-y2-2: #F8D33E;
+
+$palette-new-o1-1: #D0570F;
+$palette-new-o1-2: #B04400;
+$palette-new-o2-1: #E57124;
+$palette-new-o2-2: #FA8829;
+
+
+/* stylelint-disable */
+.Theme_color_myDark {
+  /* //////////////////////////////
+  // Цвета фонов /////////////// */
+  --color-bg-default: color($palette-g1); /* Цвет дефолта */ /* поставила цвет дашборда */
+  --color-bg-secondary: color($palette-g2); /* Дополнительный цвет фона */ /* поставила цвет виджета */
+  --color-bg-brand: color($palette-new-b1-1); /* Цвет фона брендированный */ /* поставила темно-синий */
+  --color-bg-link: color($palette-lock-d); /* Цвет фона ссылки */ /* НЕЕЕЕЕЕ ПОНЯЛА что за фон ссылки */
+  --color-bg-border: color($palette-g4); /* Цвет границ */ /* поставила цвет границы виджета !!!!!!*/
+  --color-bg-stripe: color($palette-g2); /* Цвет зебры (например, при окрашивании фона строк таблицы через одну) */ /* поставила цвет зебры*/
+
+  --color-bg-ghost: color($palette-g2); /* Цвет затенения */ /* НЕЕЕЕЕЕ ПОНЯЛА */
+  --color-bg-tone: color($palette-g1); /* Цвет паранджи */ /* НЕЕЕЕЕЕ ПОНЯЛА */
+  --color-bg-soft: color($palette-g11); /* Цвет молока */ /* НЕЕЕЕЕЕ ПОНЯЛА */
+  --color-bg-system: color($palette-g5); /* Цвет фона системнный */ /* НЕЕЕЕЕЕ ПОНЯЛА */
+  --color-bg-normal: color($palette-lock-d); /* Цвет фона нейтральный */ /* НЕЕЕЕЕЕ ПОНЯЛА поставила голубой*/
+  --color-bg-success: color($palette-gr1); /* Цвет фона успеха ЗЕЛЕНЫЙ */
+  --color-bg-caution: color($palette-new-y1-1); /* Цвет фона осторожности ЖЕЛТЫЙ */
+  --color-bg-warning: color($palette-new-o1-1); /* Цвет фона предупреждения ОРАНЖЕВЫЙ */
+  --color-bg-alert: color($palette-r1); /* Цвет фона ошибки КРАСНЫЙ */
+  --color-bg-critical: color($palette-r1-20); /* Цвет фона системнный ТЕМНО КРАСНЫЙ  AAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
+
+  /* //////////////////////////////
+  // Цвета текста ////////////// */
+  --color-typo-primary: color($palette-g12); /* Цвет основного текста */ /* поставила контрастный */
+  --color-typo-secondary: color($palette-g9); /* Цвет второстепенного текста */ /* поставила мейн */
+  --color-typo-ghost: color($palette-g7); /* Цвет дополнительного текста */ /* поставила цвет подписи */
+  --color-typo-brand: color($palette-new-b1-2); /* Цвет брендового текста */ /* НЕЕЕЕЕЕ ПОНЯЛА поставила синий*/
+  --color-typo-system: color($palette-g6); /* НЕЕЕЕЕЕ ПОНЯЛА */
+
+  --color-typo-normal: color($palette-new-b1-2); /* Цвет фона нейтральный */
+  --color-typo-success: color($palette-new-g1-2); /* Цвет текста успеха */
+  --color-typo-caution: color($palette-new-y2-2); /* Цвет текста осторожности */
+  --color-typo-warning: color($palette-new-o2-2); /* Цвет текста предупреждения */
+  --color-typo-alert: color($palette-r1); /* Цвет текста ошибки */
+  --color-typo-critical: color($palette-r1-20); /* Цвет фона системнный */
+  --color-typo-link: color($palette-new-b1-1); /* Цвет основной ссылки */
+  --color-typo-link-minor: color($palette-new-b2-1); /* Цвет второстепенной ссылки */
+  --color-typo-link-hover: color($palette-new-b1-2); /* Цвет ховера ссылки */
+
+  /* //////////////////////////////
+  // Цвета скроллбара ////////////// */
+  --color-scroll-bg: color($palette-g1);
+  --color-scroll-thumb: color($palette-g10);
+  --color-scroll-thumb-hover: color($palette-g11);
+
+  /* /////////////////////////////
+  // Цвета контролов ЧТО ТАКОЕ ДЕФОЛТ / ПРАЙМАРИ / СЕКОНДАРИ / ГОСТ /////////// */
+
+  /* Default */
+  --color-control-bg-default: color($palette-g2); /* Цвет фона контрола */
+  --color-control-typo-default: color($palette-g12); /* Цвет основного текста контрола */
+  --color-control-typo-placeholder: color($palette-g9); /* Цвет плейсхолдера контрола !!!!!!!*/
+  --color-control-bg-border-default: color($palette-g4); /* Цвет фона бордеров котрола */
+  --color-control-bg-border-default-hover: color($palette-new-b1-1); /* Цвет фона бордеров контрола по ховеру */
+
+  --color-control-bg-border-focus: color($palette-new-b1-1); /* Цвет аутлайна контролов при фокусе */ /* TODO заменить на правило целиком */ /* ПОНЯЛА на шару */
+  --color-control-bg-focus: color($palette-b1-20); /* Цвет тени в состонии фокуса */ /* НЕЕЕЕЕЕт теней*/
+  --color-control-bg-active: color($palette-b1-20); /* Цвет тени в состонии нажатия */ /* НЕЕЕЕЕЕт теней*/
+
+  /* Primary */
+  --color-control-bg-primary: color($palette-new-b1-1); /* Цвет фона активного контрола */ /* ЭТО ТОЧНО ПРО ФОН?*/
+  --color-control-bg-primary-hover: color($palette-new-b1-2); /* Цвет фона активного контрола по ховеру */ /* ЭТО ТОЧНО ПРО ФОН?*/
+
+  --color-control-typo-primary: color($palette-g1); /* Цвет акцентного текста */
+  --color-control-typo-primary-hover: color($palette-g2); /* Цвет акцентного текста */
+
+  /* Secondary */
+  --color-control-bg-secondary: color($palette-g1); /* Цвет фона бордеров котрола */ /* ЦВЕТ ФОНА БОРДЕРОВ? СДЕЛАЛА КАК У ДЕФОЛТА*/
+  --color-control-bg-border-secondary: color($palette-new-b1-1); /* Цвет фона бордеров котрола */
+  --color-control-bg-border-secondary-hover: color($palette-new-b1-2); /* Цвет фона бордеров контрола по ховеру */
+  --color-control-typo-secondary: color($palette-new-b1-1); /* Цвет второстепеного текста контрола */
+  --color-control-typo-secondary-hover: color($palette-new-b1-2); /* Цвет акцентного текста */
+
+  /* Ghost */
+  --color-control-bg-ghost: color($palette-g3); /* Цвет фона дополнительного контрола */
+  --color-control-bg-ghost-hover: color($palette-g2); /* Цвет фона дополнительного контрола по ховеру */
+  --color-control-typo-ghost: color($palette-g9); /* Цвет дополнительного текста контрола */
+  --color-control-typo-ghost-hover: color($palette-g12); /* Цвет акцентного текста */
+
+  /* Clear */
+  --color-control-bg-clear: color($palette-g1); /* Цвет фона чистого контрола */
+  --color-control-bg-clear-hover: color($palette-g2); /* Цвет фона чистого контрола по ховеру */
+  --color-control-typo-clear: color($palette-g12); /* Цвет акцентного текста */
+  --color-control-typo-clear-hover: color($palette-g12); /* Цвет акцентного текста */
+
+  /* Disable */
+  --color-control-bg-disable: color($palette-g2); /* Цвет фона неактивного контрола */
+  --color-control-bg-border-disable: color($palette-g2); /* Цвет фона бордеров неактивного контрола */ /* У НАС ЕГО НЕТ*/
+  --color-control-typo-disable: color($palette-g9); /* Цвет основного текста неактивного контрола */
+
+  /* /////////////////////////////
+  // Цвета тени /////////// */
+  --color-shadow-group-1: color($palette-g4 a(8%));
+  --color-shadow-group-2: color($palette-g4 a(32%));
+  --color-shadow-layer-1: color($palette-g4 a(8%));
+  --color-shadow-layer-2: color($palette-g4 a(32%));
+  --color-shadow-modal-1: color($palette-g4 a(8%));
+  --color-shadow-modal-2: color($palette-g4 a(32%));
+}
+/* stylelint-enable */
