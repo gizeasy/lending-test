@@ -1,4 +1,4 @@
-"use strict";
+
 
 const fs = require("fs");
 const path = require("path");
@@ -127,6 +127,8 @@ module.exports = function (webpackEnv) {
               stage: 3,
             }),
             require("postcss-nested"),
+            require('postcss-simple-vars'), 
+            require('postcss-color-function'),
             require("autoprefixer"),
             // Adds PostCSS Normalize as the reset css with default options,
             // so that it honors browserslist config in package.json

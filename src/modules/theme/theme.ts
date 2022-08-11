@@ -1,16 +1,14 @@
 import { declareAtom, declareAction } from "@reatom/core";
-import {
-  ThemePreset,
-  presetGpnDark,
-  presetGpnDefault,
-} from "@consta/uikit/Theme";
+
+import {presetMyDark} from './presets/presetMyDark'
+import {presetMyDefault} from './presets/presetMyDefault'
 
 const themes = ["default", "dark"] as const;
 export type Theme = typeof themes[number];
 
-export const mapTheme: Record<Theme, ThemePreset> = {
-  default: presetGpnDefault,
-  dark: presetGpnDark,
+export const mapTheme = {
+  default: presetMyDefault,
+  dark: presetMyDark,
 };
 
 export const toogleThemeAction = declareAction();
