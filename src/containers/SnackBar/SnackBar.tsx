@@ -7,8 +7,11 @@ import { sidebarAtom } from "../../modules/app/app";
 
 const cnSnackBar = cn("SnackBar");
 
+const getItemAutoClose = () => 5;
+const getItemShowProgress = () => 'timer' as const;
+
 export const SnackBar: React.FC = () => {
   return (
-    <SnackBarConsta className={cnSnackBar()} items={useAtom(sidebarAtom)} />
+    <SnackBarConsta className={cnSnackBar()} items={useAtom(sidebarAtom)} getItemAutoClose={getItemAutoClose} getItemShowProgress={getItemShowProgress}/>
   );
 };

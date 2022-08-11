@@ -3,7 +3,7 @@ import React from "react";
 import "./MainPagePreciseSelection.css";
 import { cn } from "../../../utils/bem";
 import { Text } from "@consta/uikit/Text";
-import { BasicSelect } from "@consta/uikit/BasicSelect";
+import { Select } from "@consta/uikit/Select";
 import { useAtom, useAction } from "@reatom/react";
 import { Badge } from "@consta/uikit/Badge";
 import { Checkbox } from "@consta/uikit/Checkbox";
@@ -15,6 +15,7 @@ import {
   getBagebyId,
   wantItSharplyAction,
   wantItSharplyValueAtom,
+  Product,
 } from "../../../modules/app/app";
 
 const cnMainPagePreciseSelection = cn("MainPagePreciseSelection");
@@ -23,7 +24,7 @@ export const MainPagePreciseSelection: React.FC = () => {
   const categoryCook = useAtom(categoryCookAtom);
   const produrtCookList = useAtom(produrtCookListAtom);
   const produrtCookValue = useAtom(produrtCookValueAtom);
-  const setProdurtCookValue = useAction(setProdurtCookValueAction);
+  const setProdurtCookValue = useAction(({value}: {value: Product | null}) => setProdurtCookValueAction(value));
   const wantItSharply = useAction(wantItSharplyAction);
   const wantItSharplyValue = useAtom(wantItSharplyValueAtom);
 
@@ -40,13 +41,14 @@ export const MainPagePreciseSelection: React.FC = () => {
       </Text>
       <div className={cnMainPagePreciseSelection("Form")}>
         <div className={cnMainPagePreciseSelection("InputWrapper")}>
-          <BasicSelect
+          <Select
             id={cnMainPagePreciseSelection("Input")}
             className={cnMainPagePreciseSelection("Input")}
             size="l"
-            placeholder="Выберите что будете  есть"
-            options={produrtCookList}
-            getOptionLabel={(item) => item.name}
+            placeholder="Выберите что будете есть"
+            items={produrtCookList}
+            getItemLabel={(item) => item.name}
+            getItemKey={(item) => item.name}
             value={produrtCookValue}
             onChange={setProdurtCookValue}
           />

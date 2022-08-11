@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
-    "@consta/uikit": "^1.10.4",
+    "@consta/uikit": "^3.28.0",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.2",
     "@reatom/core": "^1.1.5",
     "@reatom/react": "^1.1.4",

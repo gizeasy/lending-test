@@ -3,7 +3,7 @@ import React from "react";
 import "./MainPageWhatToCook.css";
 import { cn } from "../../../utils/bem";
 import { Text } from "@consta/uikit/Text";
-import { BasicSelect } from "@consta/uikit/BasicSelect";
+import { Select } from "@consta/uikit/Select";
 import { Switch } from "@consta/uikit/Switch";
 import { whatToCook } from "../../../modules/app/mock";
 import { useAtom, useAction } from "@reatom/react";
@@ -14,6 +14,7 @@ import {
   thinDoughAtom,
   setDoublePortionAction,
   doublePortionAtom,
+  CategoryCook,
 } from "../../../modules/app/app";
 import Pizza from "../../../svg/Pizza.svg";
 
@@ -21,7 +22,7 @@ const cnMainPageWhatToCook = cn("MainPageWhatToCook");
 
 export const MainPageWhatToCook: React.FC = () => {
   const categoryCook = useAtom(categoryCookAtom);
-  const setCategoryCook = useAction(setCatecoryCookAction);
+  const setCategoryCook = useAction(({value}: {value: CategoryCook | null}) => setCatecoryCookAction(value));
 
   const thinDough = useAtom(thinDoughAtom);
   const setThinDough = useAction(setThinDoughAction);
@@ -38,13 +39,13 @@ export const MainPageWhatToCook: React.FC = () => {
         Что приготовить?
       </Text>
       <div className={cnMainPageWhatToCook("InputWrapper")}>
-        <BasicSelect
+        <Select
           id={cnMainPageWhatToCook("Input")}
           className={cnMainPageWhatToCook("Input")}
           size="l"
           placeholder="Выберите что будете  есть"
-          options={whatToCook}
-          getOptionLabel={(item) => item.name}
+          items={whatToCook}
+          getItemLabel={(item) => item.name}
           value={categoryCook}
           onChange={setCategoryCook}
         />

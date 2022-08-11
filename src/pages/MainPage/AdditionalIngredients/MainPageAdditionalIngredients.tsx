@@ -10,26 +10,26 @@ import {
   setAdditionalIngredientsAction,
   addUserIngredientsAction,
   AdditionalIngredient,
-  userIngredientsAtom,
+
 } from "../../../modules/app/app";
-import { MultiCombobox } from "@consta/uikit/MultiCombobox";
+import { Combobox } from "@consta/uikit/Combobox";
 
 const cnMainPageAdditionalIngredients = cn("MainPageAdditionalIngredients");
 
 export const MainPageAdditionalIngredients: React.FC = () => {
   const additionalIngredients = useAtom(additionalIngredientListAtom);
-  const userIngredients = useAtom(userIngredientsAtom);
+
   const additionalIngredientsValue = useAtom(additionalIngredientsValueAtom);
-  const setAdditionalIngredients = useAction(setAdditionalIngredientsAction);
+  const setAdditionalIngredients = useAction(({value}:{value: AdditionalIngredient[] | null}) => setAdditionalIngredientsAction(value));
   const addUserIngredients = useAction(addUserIngredientsAction);
 
   if (additionalIngredients.length === 0) {
     return null;
   }
 
-  const hadleCreate = (label: string) => {
+  const hadleCreate = ({label}:{label: string}) => {
     addUserIngredients(label);
-    setAdditionalIngredients([
+    setAdditionalIngredients({value: [
       {
         label,
         category: ["user"],
@@ -41,12 +41,12 @@ export const MainPageAdditionalIngredients: React.FC = () => {
         kilocalories: 100,
       },
       ...(additionalIngredientsValue ? additionalIngredientsValue : []),
-    ]);
+    ]});
   };
 
-  const handleChandge = (items: AdditionalIngredient[] | null) => {
-    setAdditionalIngredients(items);
-  };
+  // const handleChandge = (items: AdditionalIngredient[] | null) => {
+  //   setAdditionalIngredients(items);
+  // };
 
   return (
     <div className={cnMainPageAdditionalIngredients()}>
@@ -54,16 +54,18 @@ export const MainPageAdditionalIngredients: React.FC = () => {
         Что бы такого добавить?
       </Text>
       <div className={cnMainPageAdditionalIngredients("InputWrapper")}>
-        <MultiCombobox
+        <Combobox
           id={cnMainPageAdditionalIngredients("Input")}
           className={cnMainPageAdditionalIngredients("Input")}
           size="l"
           placeholder="Дополнительные ингридиенты"
-          onChange={handleChandge}
           value={additionalIngredientsValue}
-          options={additionalIngredients}
-          getOptionLabel={(item) => item.label}
-          // onCreate={hadleCreate}
+          onChange={setAdditionalIngredients}
+          items={additionalIngredients}
+          getItemLabel={(item) => item.label}
+          getItemKey={(item) => item.label}
+          onCreate={hadleCreate}
+          multiple
         />
         {/* <Text size="s" fontStyle="italic" view="secondary">
           Можете добавить свой вариант. Если мы найдём это на кухне, мы не
